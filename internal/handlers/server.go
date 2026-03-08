@@ -18,14 +18,14 @@ func New(fsys fs.FS) *Server {
 	}
 }
 
-func (s *Server) Handler(staticDir string) http.Handler {
+func (s *Server) Handler(staticFS fs.FS) http.Handler {
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /", s.Home)
 	mux.HandleFunc("GET /smkent", s.Gallery)
 	mux.HandleFunc("GET /smkent/", s.Gallery)
-	mux.Handle("GET /static/", http.StripPrefix("/static/", http.FileServer(http.Dir(staticDir))))
+	mux.Handle("GET /static/", http.StripPrefix("/static/", http.FileServer(http.FS(staticFS))))
 	mux.HandleFunc("GET /favicon.ico", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, staticDir+"/favicon.ico")
+		http.ServeFileFS(w, r, staticFS, "favicon.ico")
 	})
 	return mux
 }

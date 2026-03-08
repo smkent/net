@@ -14,7 +14,6 @@ FROM alpine:3.19
 WORKDIR /app
 
 COPY --from=builder /build/smkent-net ./
-COPY static/ static/
 
 EXPOSE 8080
 CMD ["./smkent-net"]
