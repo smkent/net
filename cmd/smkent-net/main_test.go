@@ -15,10 +15,11 @@ func testMux(t *testing.T) *http.ServeMux {
 	_, filename, _, _ := runtime.Caller(0)
 	staticDir := filepath.Join(filepath.Dir(filename), "../../static")
 
+	srv := handlers.New(handlers.TemplateFS)
 	mux := http.NewServeMux()
-	mux.HandleFunc("GET /", handlers.Home)
-	mux.HandleFunc("GET /smkent", handlers.Gallery)
-	mux.HandleFunc("GET /smkent/", handlers.Gallery)
+	mux.HandleFunc("GET /", srv.Home)
+	mux.HandleFunc("GET /smkent", srv.Gallery)
+	mux.HandleFunc("GET /smkent/", srv.Gallery)
 	mux.Handle("GET /static/", http.StripPrefix("/static/", http.FileServer(http.Dir(staticDir))))
 	return mux
 }

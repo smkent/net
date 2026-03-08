@@ -8,11 +8,12 @@ import (
 )
 
 func main() {
-	mux := http.NewServeMux()
+	srv := handlers.New(handlers.TemplateFS)
 
-	mux.HandleFunc("GET /", handlers.Home)
-	mux.HandleFunc("GET /smkent", handlers.Gallery)
-	mux.HandleFunc("GET /smkent/", handlers.Gallery)
+	mux := http.NewServeMux()
+	mux.HandleFunc("GET /", srv.Home)
+	mux.HandleFunc("GET /smkent", srv.Gallery)
+	mux.HandleFunc("GET /smkent/", srv.Gallery)
 	mux.Handle("GET /static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	mux.HandleFunc("GET /favicon.ico", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "static/favicon.ico")
