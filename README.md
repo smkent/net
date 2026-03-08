@@ -2,14 +2,7 @@
 
 ## Development
 
-Build and run in Docker:
-
-```sh
-docker build -t net . && docker run --rm -p 8080:8080 net
-```
-
-Build and run tests locally:
-
-```
-go test ./...
-```
+* Serve locally on port 8080: `go run ./...`
+* Run tests: `go test ./...`
+* Build and run in Docker:
+  `docker build -t net . && docker run --rm -p 8080:8080 net`
