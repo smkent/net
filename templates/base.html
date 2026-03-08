@@ -1,0 +1,29 @@
+{{define "base"}}<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#606875">
+<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/static/main.css" />
+<link rel="manifest" href="/static/manifest.json" />
+<link rel="apple-touch-icon" href="/static/smkent-180px.jpg" sizes="180x180" />
+<link rel="icon" href="/static/smkent-192px.jpg" sizes="192x192" />
+<link rel="icon" href="/static/combadge-32px.png" sizes="32x32" />
+<link rel="icon" href="/static/combadge-16px.png" sizes="16x16" />
+<title>{{template "title" .}}</title>
+{{template "head" .}}
+</head>
+<body>
+<div class="body-overlay"></div>
+<div class="body-container">
+<div class="body-section">
+{{template "content" .}}
+{{template "footer" .}}
+</div>
+</div>
+</body>
+</html>{{end}}
+
+{{define "title"}}{{.Host}}{{end}}
+{{define "head"}}{{end}}
+{{define "footer"}}{{end}}
