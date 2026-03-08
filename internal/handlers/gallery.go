@@ -5,7 +5,8 @@ import (
 	"net/http"
 )
 
-var galleryTemplate = template.Must(template.ParseFiles(
+var galleryTemplate = template.Must(template.ParseFS(
+	templateFS,
 	"templates/base.html",
 	"templates/gallery.html",
 ))
