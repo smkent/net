@@ -8,18 +8,10 @@ import (
 )
 
 func main() {
-	mux := http.NewServeMux()
-
-	mux.HandleFunc("GET /", handlers.Home)
-	mux.HandleFunc("GET /smkent", handlers.Gallery)
-	mux.HandleFunc("GET /smkent/", handlers.Gallery)
-	mux.Handle("GET /static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
-	mux.HandleFunc("GET /favicon.ico", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "static/favicon.ico")
-	})
+	srv := handlers.New(handlers.TemplateFS)
 
 	log.Println("Listening on :8080")
-	if err := http.ListenAndServe(":8080", mux); err != nil {
+	if err := http.ListenAndServe(":8080", srv.Handler("static")); err != nil {
 		log.Fatal(err)
 	}
 }

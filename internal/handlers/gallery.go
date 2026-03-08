@@ -1,15 +1,6 @@
 package handlers
 
-import (
-	"html/template"
-	"net/http"
-)
-
-var galleryTemplate = template.Must(template.ParseFS(
-	templateFS,
-	"templates/base.html",
-	"templates/gallery.html",
-))
+import "net/http"
 
 type image struct {
 	Name   string
@@ -35,12 +26,12 @@ var images = []image{
 	{"borg", 200, 175},
 }
 
-func Gallery(w http.ResponseWriter, r *http.Request) {
+func (s *Server) Gallery(w http.ResponseWriter, r *http.Request) {
 	data := galleryData{
 		Host:   r.Host,
 		Images: images,
 	}
-	if err := galleryTemplate.ExecuteTemplate(w, "base", data); err != nil {
+	if err := s.galleryTemplate.ExecuteTemplate(w, "base", data); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }
