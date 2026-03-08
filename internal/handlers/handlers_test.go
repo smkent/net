@@ -1,6 +1,7 @@
 package handlers_test
 
 import (
+	"io/fs"
 	"net/http"
 	"net/http/httptest"
 	"strings"
@@ -11,7 +12,11 @@ import (
 
 func testHandler(t *testing.T) http.Handler {
 	t.Helper()
-	return handlers.New(handlers.TemplateFS).Handler(t.TempDir())
+	staticFS, err := fs.Sub(handlers.StaticFS, "static")
+	if err != nil {
+		t.Fatal(err)
+	}
+	return handlers.New(handlers.TemplateFS).Handler(staticFS)
 }
 
 func TestHomeOK(t *testing.T) {

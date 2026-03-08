@@ -1,10 +1,9 @@
 package main
 
 import (
+	"io/fs"
 	"net/http"
 	"net/http/httptest"
-	"path/filepath"
-	"runtime"
 	"testing"
 
 	"smkent.net/internal/handlers"
@@ -12,9 +11,11 @@ import (
 
 func testHandler(t *testing.T) http.Handler {
 	t.Helper()
-	_, filename, _, _ := runtime.Caller(0)
-	staticDir := filepath.Join(filepath.Dir(filename), "../../static")
-	return handlers.New(handlers.TemplateFS).Handler(staticDir)
+	staticFS, err := fs.Sub(handlers.StaticFS, "static")
+	if err != nil {
+		t.Fatal(err)
+	}
+	return handlers.New(handlers.TemplateFS).Handler(staticFS)
 }
 
 func TestStaticImageOK(t *testing.T) {
