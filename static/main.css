@@ -1,0 +1,218 @@
+body {
+    background-color: #262626;
+    color: #eee;
+    font-size: 0.84em;
+    font-family: 'Liberation Sans', Arial, sans-serif;
+    margin: 1em 2em 1em 1em;
+}
+
+.material-icons {
+    position: relative;
+    font-size: 140%;
+    top: -0.05em;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.vmiddle {
+    vertical-align: middle;
+}
+
+.upper {
+    /* text-transform: uppercase; */
+    font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
+}
+
+div.h1-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+div.h1-home {
+    position: relative;
+}
+
+div.h1-home div.h1-right {
+    position: absolute;
+    right: -1em;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+div.h1-home div.h1-right img#go {
+    max-height: 2.5em;
+    padding: 0em 1em 0em 1em;
+}
+
+h1, div.h1-block {
+    font: bold 2.5em 'Droid Sans', Arial, Helvetica, sans-serif;
+    letter-spacing: -1px;
+    padding: 0 0 0 0;
+    margin: 0 0.5em 0 0;
+    overflow: hidden;
+
+    background-color: #ddd;
+    background-image: linear-gradient(0deg, #aaa, #fff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+
+div.h1-block {
+    display: inline-block;
+}
+
+h1 a:hover {
+    text-decoration: none;
+    color: #c5dcf6;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #bbb;
+}
+
+h1 .error {
+    color: #f44;
+}
+
+h2 {
+    color: #7aace5;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: dotted 1px #888;
+    margin: 10px 0 10px 0;
+}
+
+h3 {
+    color: #ddd;
+    text-decoration: underline dashed 1px #fa0;
+}
+
+hr, div.hr {
+    clear: all;
+    border: 0;
+    border-top: 1px dotted #888;
+}
+
+hr.h1 {
+    margin: 0 0 0.5em 0;
+}
+
+a {
+    text-decoration: none;
+    color: #6faef6;
+}
+
+a.exit {
+    color: #f44;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+div.body-section {
+    margin: 0 auto;
+    width: 98%;
+    padding: 0.8em;
+    clear: both;
+}
+
+.footer {
+    position: relative;
+    color: #aaa;
+    font-size: 85%;
+}
+
+.footer a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+img {
+    border: 0;
+}
+
+
+img.id-image {
+    border-radius: 6px;
+    margin: 0 10px 10px 0;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+div.inline {
+    display: inline-block;
+    max-width: 65%;
+    margin: 0px;
+    padding: 0px;
+}
+
+img.account-logo {
+    vertical-align: middle;
+    margin-bottom: 2px;
+    padding: 0 5px 0 0;
+    height: 24px;
+    width: 24px;
+}
+
+div.account-link {
+    font-size: 1.1em;
+    padding: 2px;
+    vertical-align: middle;
+}
+
+div.gallery-id {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 4px 2px 0;
+    cursor: pointer;
+}
+
+div.gallery-id img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+img#full-size {
+    border-radius: 6px;
+    max-width: 100%;
+    height: auto;
+}
+
+.pgp-signature {
+    font-family: monospace;
+    font-size: 1.1em;
+    vertical-align: middle;
+}
+
+.pgp-signature a {
+    color: #eee;
+}
+
+@media only screen and (min-width: 768px) {
+    div.body-section {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    img.id-image {
+        float: left;
+    }
+}

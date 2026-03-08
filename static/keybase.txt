@@ -1,0 +1,78 @@
+==================================================================
+https://keybase.io/smkent
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://smkent.net
+  * I am smkent (https://keybase.io/smkent) on keybase.
+  * I have a public key with fingerprint 0342 C809 99FB 1A06 FD0F  9533 8392 C992 D925 00A9
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01018ab2c71f00d0cae5cb7ccba23c7f6d684a172dc1bebef0122c4623839251bbe80a",
+            "fingerprint": "0342c80999fb1a06fd0f95338392c992d92500a9",
+            "host": "keybase.io",
+            "key_id": "8392c992d92500a9",
+            "kid": "01018ab2c71f00d0cae5cb7ccba23c7f6d684a172dc1bebef0122c4623839251bbe80a",
+            "uid": "3c3dfce5cd8f340c63cf099a9943d619",
+            "username": "smkent"
+        },
+        "revoke": {
+            "sig_ids": [
+                "952670b1bc22e740b236bdb5783b1018049cdd87ab4932d53b3b65e7096e82df0f"
+            ]
+        },
+        "service": {
+            "hostname": "smkent.net",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1471814756,
+    "expire_in": 157680000,
+    "prev": "69f91941878758b84f652a3f950a353a5868d6ffd0ec9e8f50bd8e4563eb6736",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtkntQVFUcxxdCHF6FaIMI4+DNpBCd+34soykMIzCAFEW6PpZ77j13984uu8vu
+ssAQiUWrOD6ABPEBjAZBTRDRmIojCdQ0k+NMY5BoiDQ8ogUsEggRonuZ+qOZ/uz8
+cc/cM9/v9/f5nd8pC3pG4+81Lmch57dHm7xu/QI0b7ZHHCpEgFUsQLSFiAkub9As
+QodTb5JFRIugGIqxPMAFBpNQVEQFHlICYAQB8DghMBIt0izJYwwuChiAAEoohuMC
+SeMES3A4hQEAWZRHYhBJthig3WaXLU41liBxgUU5jpMAxqO0JKISRxHLJoHjcFHx
+oijPKUaj1aE6FDjAO+BW2aqcKT/6Zbz/0P/P3LnLcYRAiJKgRIisRJCoQBOCpNDz
+HEcSIo2pdXMd0G7hs6GidmSboNJmUQxihy6rCaq36pANCrID0e5DOAqnGRRgQMBx
+yJAowAkaiIBiWAKo2CjJCaLIMjwgOQIXKQIQgKYgg3I0ZHFRQiXkgJKt1HPJwnK4
+ekf/qr3VAp0Kk81udVoFq1k5NzqdNodWZXIW2FRhHmwF+r8z9EC2iMqAFIsL2h2y
+1YJoMUUqOGU1FCMZjFU+FB2DwHybbId6WVVQDM2iylILQZeSSXMSh3EkxjIsQ7GA
+JSWawnlCGS3KExTBUyzNirSkTBsKHGQlCgUiC0mKJiCgGYJG1K5yLFZEyymcvEHt
+RzZYeGeuHSJF/qXeET4aL3+N7wpv9eVq/P2C/3nOtZ5gTUduU2N1/XjhlstTs71r
+8j55vSPaMGm05vTOReZtTg6b9PaPfLhjPJDr/yF/X1ezMaO2JcMdMp5zuqftd839
+fikk6kJK94bB7lD07Hnhq5GLDWNDM8HTlXWku6oiNWvhwsD0t1WJaecWx1qO95QP
+xGYmbMxc29QWvufOyLr68k3PMsmgu6s+anTt9emerD2+sW77oYFNus+qVz7uGv6j
+YDb0Tp1L59vSN9PR1hB34NejvQsr6n6+dC3r65rrT2r7D772YnOy4Uxl7W9U9ZLn
+7rWeKxPbWo8P7Pqw2yTdXFXUv2Xvqqvz7ZqUsIHotP0BQ0kb5jojPsgP+KkbTOmK
+t7+cmzGSEnz5yM3voqrcr5TUOHev95zy3Jv1efTuS/Wxf+5KLdsbX5Hsil/02Tbj
++PFKcefixTMJS2mxbR6q91SNfnL1qH2lM4pMf25d9Uedurlxsqe56o32xvnDwEwa
+j8j3H9bvvLRzNKMk1l0cuXQjcbd5YsBQB60lB6fCS3VrzkXq9icWffzFaMA7rSHG
+0vQHh8szN085jr4QmEilnng/I6yvoSrw7c9HH5c9DQxz1VT2VbR+Ojs4+MRPl3Bs
+2LD6y7xX38rznNgYHjf8zY6Fq4ag0vn0prNuwnYs6emjeDz09FC211j18yfvLeU+
+WFjv5uLM7yXdNjcxflnft8Tdbbw1MdSJ3M4PuhEh/gU=
+=KwDz
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/smkent
+
+==================================================================

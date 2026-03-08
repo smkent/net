@@ -1,0 +1,20 @@
+{{define "head"}}<script src="/static/js/smkent.js"></script>{{end}}
+
+{{define "content"}}
+{{range .Images -}}
+<div class="gallery-id" data-image-uri="/static/smkent/{{.Name}}.jpg">
+    <img src="/static/smkent/thumb/{{.Name}}.jpg" alt="smkent" />
+</div>
+{{- end}}
+<br />
+<a href="#" id="full-size-link" class="hidden">
+    <img src="#" alt="smkent" id="full-size">
+</a>
+{{end}}
+
+{{define "footer"}}
+<br />
+<div class="footer">
+    <a href="/">{{.Host}}</a>
+</div>
+{{end}}
