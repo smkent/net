@@ -8,7 +8,8 @@ import (
 
 const pgpKey = "0x0342C80999FB1A06FD0F95338392C992D92500A9"
 
-var homeTemplate = template.Must(template.ParseFiles(
+var homeTemplate = template.Must(template.ParseFS(
+	templateFS,
 	"templates/base.html",
 	"templates/index.html",
 ))
