@@ -66,7 +66,7 @@ func TestStaticAssetsOK(t *testing.T) {
 		path string
 	}{
 		{"/favicon.ico"},
-		{"/.well-known/keybase.txt"},
+		{"/keybase.txt"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.path, func(t *testing.T) {
