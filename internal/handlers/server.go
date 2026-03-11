@@ -27,5 +27,8 @@ func (s *Server) Handler(staticFS fs.FS) http.Handler {
 	mux.HandleFunc("GET /favicon.ico", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFileFS(w, r, staticFS, "favicon.ico")
 	})
+	mux.HandleFunc("GET /.well-known/keybase.txt", func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFileFS(w, r, staticFS, "keybase.txt")
+	})
 	return mux
 }
