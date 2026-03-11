@@ -60,3 +60,24 @@ func TestHomeNotFound(t *testing.T) {
 		t.Errorf("expected status 404, got %d", w.Code)
 	}
 }
+
+func TestStaticAssetsOK(t *testing.T) {
+	tests := []struct {
+		path string
+	}{
+		{"/favicon.ico"},
+		{"/.well-known/keybase.txt"},
+	}
+	for _, tt := range tests {
+		t.Run(tt.path, func(t *testing.T) {
+			req := httptest.NewRequest(http.MethodGet, tt.path, nil)
+			w := httptest.NewRecorder()
+
+			testHandler(t).ServeHTTP(w, req)
+
+			if w.Code != http.StatusOK {
+				t.Errorf("expected status 200, got %d", w.Code)
+			}
+		})
+	}
+}
