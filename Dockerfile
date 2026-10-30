@@ -9,7 +9,7 @@ COPY cmd/ cmd/
 COPY internal/ internal/
 RUN go build -o smkent-net ./cmd/smkent-net/
 
-FROM alpine:3.19
+FROM alpine:3
 
 WORKDIR /app
 
