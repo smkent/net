@@ -7,12 +7,18 @@ postinstall = [
 
 [tools]
 betterleaks = "latest"
+go = "latest"
 jactionlint = "latest"
 "pipx:commit-check" = "latest"
 "pipx:copier" = "latest"
 prek = "latest"
 taplo = "latest"
 uv = "latest"
+
+[tasks.dev]
+alias = ['default']
+description = "Run code"
+run = 'go run ./cmd/smkent-net/'
 
 [tasks.lint]
 description = "Run all formatters and static checks"
@@ -31,4 +37,4 @@ run = "betterleaks git . --redact"
 [tasks.test]
 description = "Run tests"
 raw_args = true
-run = "echo \"No test command defined. Set the \\`test\\` command in mise.toml -> [tasks.test] -> \\`run\\`.\""
+run = "go test ./..."
