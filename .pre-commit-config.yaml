@@ -25,14 +25,9 @@ repos:
         entry: betterleaks git . --pre-commit --staged --redact
         language: system
         pass_filenames: false
-      - id: gofmt
-        name: gofmt
-        entry: gofmt -l -w
-        language: system
-        types: [go]
-      - id: go-vet
-        name: go vet
-        entry: go vet ./...
+      - id: golangci-lint
+        name: golangci-lint
+        entry: golangci-lint run --fix
         language: system
         types: [go]
         pass_filenames: false
