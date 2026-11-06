@@ -33,7 +33,7 @@ run = [{ task = "lint" }, { task = "test" }]
 [tasks.secretscan]
 description = "Scan git history for secrets"
 raw_args = true
-run = "betterleaks git . --redact"
+run = "betterleaks git . --redact --config .betterleaks.toml"
 
 [tasks.test]
 description = "Run tests"
